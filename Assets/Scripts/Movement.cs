@@ -19,6 +19,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         //Turning
+        Turn();
         //Jumping
         //Move
         Walk();
@@ -37,6 +38,11 @@ public class Movement : MonoBehaviour
     void Move()
     {
         anim.SetFloat("Forward", Input.GetAxis("Vertical"));
+    }
+
+    void Turn()
+    {
+        anim.SetFloat("Turn", Input.GetAxis("Horizontal"));
     }
 
 }
